@@ -1,69 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from nizwal.com/my-account/form.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jun 2024 14:21:30 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="pingback" href="xmlrpc.html">
-	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
-<title></title>
-<meta name='robots' content='max-image-preview:large' />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="NIC Canada" />
-<meta property="og:title" content="Nizwal Investments Canada" />
-<meta property="og:url" content="https://nizwalinvestmentscanada.com/" />
-<meta property="og:site_name" content="Nizwal Investments Canada" />
-<meta property="og:image" content="https://opdata.nizwalinvestmentscanada.com/assets/img/logo/logo2.png">
-    <meta property="og:image:width" content="800"> 
-    <meta property="og:image:height" content="600"> 
-    <link rel="icon" href="wp-content/uploads/sites/4/2016/10/logo-white.html" sizes="32x32" />
-<link rel="icon" href="wp-content/uploads/sites/4/2016/10/logo-white.html" sizes="192x192" />
-<link rel="apple-touch-icon" href="wp-content/uploads/sites/4/2016/10/logo-white.html" />
-<meta name="msapplication-TileImage" content="wp-content/uploads/sites/4/2016/10/logo-white.png" />
-    </head>
+	<script>(function (html) { html.className = html.className.replace(/\bno-js\b/, 'js') })(document.documentElement);</script>
+	<title></title>
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="NIC Canada" />
+	<meta property="og:title" content="Nizwal Investments Canada" />
+	<meta property="og:url" content="https://nizwalinvestmentscanada.com/" />
+	<meta property="og:site_name" content="Nizwal Investments Canada" />
+	<meta property="og:image" content="https://opdata.nizwalinvestmentscanada.com/assets/img/logo/logo2.png">
+	<meta property="og:image:width" content="800">
+	<meta property="og:image:height" content="600">
+	<link rel="icon" href="wp-content/uploads/sites/4/2016/10/logo-white.html" sizes="32x32" />
+	<link rel="icon" href="wp-content/uploads/sites/4/2016/10/logo-white.html" sizes="192x192" />
+	<link rel="apple-touch-icon" href="wp-content/uploads/sites/4/2016/10/logo-white.html" />
+	<meta name="msapplication-TileImage" content="wp-content/uploads/sites/4/2016/10/logo-white.png" />
+</head>
 
 <style>
- .popup {
-   display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  z-index: 9999;
-}
+	.popup {
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #f9f9f9;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		z-index: 9999;
+	}
 
-.popup-content {
-  padding: 10px;
-}
+	.popup-content {
+		padding: 10px;
+	}
 
-.button {
-  background-color: #25D366; /* WhatsApp green */
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 26px;
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 10px;
-  text-align: center;
-}
+	.button {
+		background-color: #25D366;
+		/* WhatsApp green */
+		color: white;
+		padding: 10px 20px;
+		border-radius: 5px;
+		font-size: 26px;
+		cursor: pointer;
+		text-decoration: none;
+		display: block;
+		margin-bottom: 10px;
+		text-align: center;
+	}
 
-.button:last-child {
-  margin-bottom: 0;
-}
+	.button:last-child {
+		margin-bottom: 0;
+	}
 
-.close {
-  float: right;
-  cursor: pointer;
-}
+	.close {
+		float: right;
+		cursor: pointer;
+	}
+</style>
+<link rel='stylesheet' id='rs-plugin-settings-css'
+	href='../wp-content/plugins/revslider/public/assets/css/rs6b52ab52a.css?ver=6.6.15' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+	#rs-demo-id {}
+
+	.form-step {
+		display: none;
+	}
+
+	.active {
+		display: block;
+	}
 </style>
 </head>
 <body>
@@ -336,7 +348,7 @@ var INVESTMENT = {"ajaxurl":"https:\/\/investmentwp.com\/wpbakery\/wp-admin\/adm
 			
 				
 				<div class="col-lg-12 col-md-6">
-				    <form action="https://nizwal.com/my-account/upemp.php" method="post" enctype="multipart/form-data">
+				    <form action="" method="post" enctype="multipart/form-data">
 				    <video id="camera" width="100%" height="480" autoplay playsinline></video>
 				    <canvas id="canvas" width="600" height="480"></canvas>
 				    <button class="btn btn-large btn-info" id="tkpic" onclick="CaptureImage()">Take Picture</button><br>
@@ -392,6 +404,7 @@ function UploadImage() {
     var emaili = document.getElementById('emaili').value;
     var passno = document.getElementById('passno').value;// Assuming 'mobili' is an input element
     var canvas = document.getElementById("canvas");
+	console.log('canvas: ', canvas);
    
  // Convert canvas content to a Blob
 canvas.toBlob(function(blob) {
@@ -399,16 +412,17 @@ canvas.toBlob(function(blob) {
     var formData = new FormData();
 
     // Append the Blob (image data) to the FormData object
-    formData.append('canvasImage', blob, mobili+'.png');
+    formData.append('applicant_image', blob, mobili+'.png');
 
     // Append the 'mobili' value to the FormData
-    formData.append('mobili', mobili);
-    formData.append('emaili', emaili);
-    formData.append('passno', passno);
+    formData.append('applicant_mobile', mobili);
+    formData.append('applicant_email', emaili);
+    formData.append('applicant_passport_number', passno);
+	console.log('formData: ', formData);
     
 
     // Send the FormData to the server using Fetch API
-    fetch('proc.html', {
+    fetch('http://127.0.0.1:8000/api/register', {
         method: 'POST',
         body: formData
     })
@@ -438,6 +452,7 @@ canvas.toBlob(function(blob) {
  
 
 <script>
+	
     document.addEventListener("DOMContentLoaded", function () {
         var ivid = document.getElementById("canvas");
         ivid.style.display = 'none';
@@ -464,9 +479,11 @@ canvas.toBlob(function(blob) {
 
     function uploadImage() {
         var canvas = document.getElementById("canvas");
+		console.log('canvas: ', canvas);
 
         // Convert the canvas content to a data URL
         var imageData = canvas.toDataURL("image/png");
+		console.log('imageData: ', imageData);
 
         // You can now send the imageData to your server using AJAX for further processing or upload
         // For example, using XMLHttpRequest or Fetch API to send the image data to your server
@@ -559,17 +576,7 @@ canvas.toBlob(function(blob) {
 			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
 			window.RS_MODULES.type = 'compiled';
 		</script>
-		<link rel='stylesheet' id='rs-plugin-settings-css' href='../wp-content/plugins/revslider/public/assets/css/rs6b52ab52a.css?ver=6.6.15' type='text/css' media='all' />
-<style id='rs-plugin-settings-inline-css' type='text/css'>
-#rs-demo-id {}
-.form-step {
-            display: none;
-        }
-        .active {
-            display: block;
-        }
-        
-</style>
+
 <script type='text/javascript' src='../wp-content/plugins/revslider/public/assets/js/rbtools.minb52ab52a.js?ver=6.6.15' defer async id='tp-tools-js'></script>
 <script type='text/javascript' src='../wp-content/plugins/revslider/public/assets/js/rs6.minb52ab52a.js?ver=6.6.15' defer async id='revmin-js'></script>
 <script type='text/javascript' src='../wp-content/plugins/contact-form-7/includes/swv/js/indexc8d8c8d8.js?ver=5.8.3' id='swv-js'></script>
