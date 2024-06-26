@@ -347,29 +347,50 @@ var INVESTMENT = {"ajaxurl":"https:\/\/investmentwp.com\/wpbakery\/wp-admin\/adm
 	   
 			
 				
-				<div class="col-lg-12 col-md-6">
+				<div class="col-lg-12 col-md-6" id="div_hide">
+					
 				    <form action="" method="post" enctype="multipart/form-data">
-				    <video id="camera" width="100%" height="480" autoplay playsinline></video>
-				    <canvas id="canvas" width="600" height="480"></canvas>
-				    <button class="btn btn-large btn-info" id="tkpic" onclick="CaptureImage()">Take Picture</button><br>
-				    <label for="step1_data">Your Mobile Number:Phone with international format e.g. 9739834567</label>
-            <input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"  type="text" name="mobili" id="mobili" placeholder="91-------"> 
-            <label for="step2_data">Your Email Address:</label>
-            <input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" type="text" name="emaili" id="emaili" required>
-            <label for="step3_data">Passport Number:</label>
-            
-            <input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"  type="text" name="passno" id="passno" required>
-            <label for="file">Upload Passport:</label>.jpg, .jpeg, .png
-            <input type="file" id="fileInput" accept="image/*">
-            <button type="button" name="passed" onclick="UploadImage()" class="btn btn-lg btn-primary">Submit</button>
-            <a href="https://nizwalinvestmentscanada.com/my-account/form.php" class="btn btn-lg btn-primary">Reset All</a>
-            </form>
+						<video id="camera" width="100%" height="480" autoplay playsinline></video>
+						<canvas id="canvas" width="600" height="480"></canvas>
+						<button class="btn btn-large btn-info" id="tkpic" onclick="CaptureImage()">Take Picture</button><br>
+						<label for="step1_data">Your Mobile Number:Phone with international format e.g. 9739834567</label>
+				<input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"  type="text" name="mobili" id="mobili" placeholder="91-------"> 
+				<!-- new ok -->
+				<label for="step2_data">Your Name:</label>
+				<input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"  type="text" name="name" id="name" > 
+				<label for="step2_data">Your Email Address:</label>
+				<input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" type="text" name="emaili" id="emaili" required>
+				<!-- new ok -->
+				<label for="step2_data">Your Address:</label>
+				<input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"  type="text" name="address" id="address" > 
+				<!-- new ok -->
+				<label for="step2_data">Your Date Of Birth:</label>
+				<input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"  type="text" name="dob" id="dob" > 
+				<!-- new ok -->
+				<label for="step2_data">Your Referance:</label>
+				<input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"  type="text" name="applicant_ref_no" id="applicant_ref_no"> 
+	
+				<label for="step3_data">Passport Number:</label>
+				<input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"  type="text" name="passno" id="passno" required>
+				<!-- new ok -->
+				<label for="step2_data">Job You Want to Apply:</label>
+				<select class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" name="job_id" id="job_id">
+					<option value="">Select Jobs</option>
+					<option value="1">LTV Driver</option>
+					<option value="2">HTV Driver</option>
+					<option value="3">Sweeper</option>
+				</select>
+	
+				<label for="file">Upload Passport:</label>.jpg, .jpeg, .png
+				<input type="file" id="fileInput" accept="image/*">
+				<button type="button" name="passed" onclick="UploadImage()" class="btn btn-lg btn-primary">Submit</button>
+				<a href="https://nizwalinvestmentscanada.com/my-account/form.php" class="btn btn-lg btn-primary">Reset All</a>
+				</form>
             
 				    
 				</div>
 				
 				</div>
-				
 			
 		
         
@@ -400,8 +421,13 @@ document.getElementById("mobili").focus();
 }
 
 function UploadImage() {
-    var mobili = document.getElementById('mobili').value;
+	var name = document.getElementById('name').value;
+	var mobili = document.getElementById('mobili').value;
     var emaili = document.getElementById('emaili').value;
+	var address = document.getElementById('address').value;
+	var dob = document.getElementById('dob').value;
+	var applicant_ref_no = document.getElementById('applicant_ref_no').value;
+	var job_id = document.getElementById('job_id').value;
     var passno = document.getElementById('passno').value;// Assuming 'mobili' is an input element
     var canvas = document.getElementById("canvas");
 	console.log('canvas: ', canvas);
@@ -415,8 +441,13 @@ canvas.toBlob(function(blob) {
     formData.append('applicant_image', blob, mobili+'.png');
 
     // Append the 'mobili' value to the FormData
+    formData.append('applicant_name', name);
     formData.append('applicant_mobile', mobili);
     formData.append('applicant_email', emaili);
+    formData.append('applicant_address', address);
+    formData.append('applicant_dob', dob);
+    formData.append('applicant_ref_no', applicant_ref_no);
+    formData.append('job_id', job_id);
     formData.append('applicant_passport_number', passno);
 	console.log('formData: ', formData);
     
@@ -428,9 +459,10 @@ canvas.toBlob(function(blob) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Image and form data saved successfully:', data);
-        alert ('Image and form data saved successfully:');
+        console.log('Image and form data saved successfully:', data.data);
+        document.getElementById("div_hide").innerHTML = `<span>This is Your Referance Number Save it for latter:<span style="font-weight: bold; font-size: 20px;">${data.data.applicant_ref_no}</span></span>`;
         // Handle the response from the server as needed
+        alert ('Image and form data saved successfully:');
         
     })
     .catch(error => {
