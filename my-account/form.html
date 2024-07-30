@@ -350,9 +350,9 @@ var INVESTMENT = {"ajaxurl":"https:\/\/investmentwp.com\/wpbakery\/wp-admin\/adm
 				<div class="col-lg-12 col-md-6" id="div_hide">
 					
 				    <form action="" method="post" enctype="multipart/form-data">
-						<video id="camera" width="100%" height="480" autoplay playsinline></video>
+						<!-- <video id="camera" width="100%" height="480" autoplay playsinline></video>
 						<canvas id="canvas" width="600" height="480"></canvas>
-						<button class="btn btn-large btn-info" id="tkpic" onclick="CaptureImage()">Take Picture</button><br>
+						<button class="btn btn-large btn-info" id="tkpic" onclick="CaptureImage()">Take Picture</button><br> -->
 						<label for="step1_data">Your Mobile Number:Phone with international format e.g. 9739834567</label>
 				<input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"  type="text" name="mobili" id="mobili" placeholder="91-------"> 
 				<!-- new ok -->
@@ -632,9 +632,9 @@ var INVESTMENT = {"ajaxurl":"https:\/\/investmentwp.com\/wpbakery\/wp-admin\/adm
 					<option value="Female">Female</option>
 				</select>
 	
-				<label for="file">Upload Passport:</label>.jpg, .jpeg, .png
+				<!-- <label for="file">Upload Passport:</label>.jpg, .jpeg, .png
 				<input type="file" id="fileInput" accept="image/*">
-				<button type="button" name="passed" onclick="UploadImage()" class="btn btn-lg btn-primary">Submit</button>
+				<button type="button" name="passed" onclick="UploadImage()" class="btn btn-lg btn-primary">Submit</button> -->
 				<a href="" class="btn btn-lg btn-primary">Reset All</a>
 				</form>
             
@@ -700,14 +700,14 @@ canvas.toBlob(function(blob) {
     var formData = new FormData();
 
     // Append the Blob (image data) to the FormData object
-    formData.append('applicant_image', blob, mobili+'.png');
-	if (fileInput.files.length > 0) {
-		const file = fileInput.files[0];
-        console.log('File Blob:', file);
-		formData.append('passport_image', file);
-    } else {
-        console.log('No file selected');
-    }
+    // formData.append('applicant_image', blob, mobili+'.png');
+	// if (fileInput.files.length > 0) {
+	// 	const file = fileInput.files[0];
+    //     console.log('File Blob:', file);
+	// 	formData.append('passport_image', file);
+    // } else {
+    //     console.log('No file selected');
+    // }
 
     // Append the 'mobili' value to the FormData
     formData.append('applicant_name', name);
@@ -717,7 +717,6 @@ canvas.toBlob(function(blob) {
     formData.append('applicant_dob', dob);
     formData.append('applicant_country', country);
     formData.append('applicant_gender', gender);
-    // formData.append('applicant_ref_no', applicant_ref_no);
     formData.append('job_id', job_id);
     formData.append('applicant_passport_number', passno);
 	console.log('formData: ', formData);
