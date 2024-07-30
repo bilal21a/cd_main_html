@@ -695,7 +695,7 @@ function UploadImage() {
 	console.log('canvas: ', canvas);
    
  // Convert canvas content to a Blob
-canvas.toBlob(function(blob) {
+//canvas.toBlob(function(blob) {
     // Create a FormData object
     var formData = new FormData();
 
@@ -740,7 +740,7 @@ canvas.toBlob(function(blob) {
 
         console.error('Error saving image and form data:', error);
     });
-}, 'image/png');
+//}, 'image/png');
 
     
 }   
