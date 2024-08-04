@@ -730,9 +730,10 @@ function UploadImage() {
     .then(response => response.json())
     .then(data => {
         console.log('Image and form data saved successfully:', data.data);
-        document.getElementById("div_hide").innerHTML = `<span>This is Your Referance Number Save it for latter:<span style="font-weight: bold; font-size: 20px;">${data.data.applicant_ref_no}</span></span>`;
+        //document.getElementById("div_hide").innerHTML = `<span>This is Your Referance Number Save it for latter:<span style="font-weight: bold; font-size: 20px;">${data.data.applicant_ref_no}</span></span>`;
+        document.getElementById("div_hide").innerHTML = `<span>Your Application Data Saved Successfully</span>`;
         // Handle the response from the server as needed
-        alert ('Image and form data saved successfully:');
+        //alert ('Image and form data saved successfully:');
         
     })
     .catch(error => {
